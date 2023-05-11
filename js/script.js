@@ -6,7 +6,7 @@ if (hamburgerBtn) {
 	hamburgerBtn.addEventListener("click", () => {
 		hamburgerBtn.classList.toggle("hamburger-menu-opened");
 		hamburgerBtn.setAttribute("aria-expanded", hamburgerBtn.classList.contains("opened"));
-		navbar.classList.toggle("nav--open");
+		navbar.classList.toggle("nav__open");
 	});
 } else {
 	console.log("hamburgerBtn is not defined");
@@ -15,14 +15,14 @@ if (hamburgerBtn) {
 // quando a janela for redimensionada, remove a classe nav--open
 window.addEventListener("resize", () => {
 	if (window.innerWidth < 768) {
-		if (navbar.classList.contains("nav--open")) {
-			navbar.classList.remove("nav--open");
+		if (navbar.classList.contains("nav__open")) {
+			navbar.classList.remove("nav__open");
 			hamburgerBtn.classList.remove("hamburger-menu-opened");
 		}
 	} else {
 		//se ainda não tiver a classe nav--open, adicione-a
-		if (!navbar.classList.contains("nav--open")) {
-			navbar.classList.add("nav--open");
+		if (!navbar.classList.contains("nav__open")) {
+			navbar.classList.add("nav__open");
 			hamburgerBtn.classList.add("hamburger-menu-opened");
 		}
 	}
@@ -56,3 +56,12 @@ window.onclick = function (event) {
 		}
 	}
 };
+
+// FORM VALIDATION //
+let form = document.querySelector("#validate-form");
+import FormValidator from "./FormValidator.js";
+
+// se o formulário existir, crie uma instância de FormValidator
+if (form) {
+	const myFormValidator = new FormValidator("#validate-form");
+}

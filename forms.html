@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Index</title>
+		<!__ css __>
+		<link rel="stylesheet" href="css/style.css" />
+		<!__ Icons __>
+		<script src="https://kit.fontawesome.com/991a1d43a9.js" crossorigin="anonymous"></script>
+		<!__ js __>
+		<script src="js/script.js" type="module"></script>
+	</head>
+	<body>
+		<aside class="sidebar-menu nav__open">
+			<div class="nav-title">
+				<h3>Dashboard</h3>
+			</div>
+			<div class="nav">
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link">
+							<i class="fa-solid fa-home"></i>
+							Home
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a href="forms.html" class="nav-link">Forms</a>
+					</li>
+					<li class="nav-item">
+						<a href="tables.html" class="nav-link">Tables</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link dropdown-btn">
+							Dropdown
+							<i class="fa-solid fa-chevron-down"></i>
+						</a>
+
+						<ul class="dropdown-content">
+							<li class="nav-item">
+								<a href="#" class="nav-link">link 1</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">link 2</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">link 3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<header class="header">
+			<div class="header-content">
+				<div class="hamburger">
+					<button class="hamburger-menu" aria-label="Main hamburger-Menu">
+						<svg width="35" height="35" viewBox="0 0 100 100">
+							<path
+								class="hamburger-menu-line hamburger-menu-line-1"
+								d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+							<path class="hamburger-menu-line hamburger-menu-line-2" d="M 20,50 H 80" />
+							<path
+								class="hamburger-menu-line hamburger-menu-line-3"
+								d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+						</svg>
+					</button>
+				</div>
+				<a href="index.html" class="logo">Dashboard</a>
+
+				<div>
+					<h3>bem-vindo</h3>
+				</div>
+			</div>
+			<div class="breadcrumbs">
+				<a href="index.html">Home</a>
+				<a href="#">Forms</a>
+			</div>
+		</header>
+
+		<main class="main-content">
+			<div class="card">
+				<div class="card__header">Form</div>
+				<div class="card__content">
+					<form class="form-wrapper" id="validate-form">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" required />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" required pattern="^(.+)@(.+)\.(.+)$" />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="color">Favorite Color</label>
+							<input type="color" id="color" />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="number">Favorite Number</label>
+							<input type="number" id="number" required />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="animal">Favorite Animal</label>
+							<input type="text" id="animal" minlength="10" />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="animal-2">Less Favorite Animal</label>
+							<input type="text" id="animal-2" custommaxlength="10" placeholder="less favorite" />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group form-group__full-width">
+							<label for="comments">Questions/Comments</label>
+							<textarea id="comments"></textarea>
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" id="password" minlength="6" required />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="password-confirm">Confirm Password</label>
+							<input type="password" id="password-confirm" match="password" minlength="6" required />
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group">
+							<span class="form-control">
+								<input type="checkbox" name="checkbox" />
+								<label for="">Checkbox</label>
+							</span>
+
+							<span class="form-control">
+								<input type="checkbox" name="checkbox-checked" checked />
+								<label for="">Checkbox - checked</label>
+							</span>
+
+							<span class="form-control form-control--disabled">
+								<input type="checkbox" name="checkbox-disabled" disabled />
+								<label for="">Checkbox Disabled</label>
+							</span>
+
+							<span class="form-control form-control--disabled">
+								<input type="checkbox" name="checkbox-disabled-checked" checked disabled />
+								<label for="">Checkbox Disabled - checked</label>
+							</span>
+						</div>
+
+						<div class="form-group">
+							<span class="form-control">
+								<input type="radio" name="radio" />
+								<label for="">Radio</label>
+							</span>
+
+							<span class="form-control">
+								<input type="radio" name="radio" checked />
+								<label for="">Radio - checked</label>
+							</span>
+						</div>
+
+						<div class="form-group">
+							<span>
+								<label for="switch">switch</label>
+							</span>
+							<span class="switch">
+								<input type="checkbox" name="switch" id="switch" />
+							</span>
+						</div>
+
+						<div class="form-group">
+							<label for="select">Select</label>
+							<select id="select">
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+								<option value="4">Option 4</option>
+							</select>
+							<span class="input__error"></span>
+						</div>
+
+						<div class="form-group form-group__full-width">
+							<div class="align-right">
+								<button type="submit" class="btn btn__primary">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- <div class="card">
+				<div class="card__header"></div>
+				<div class="card__content">
+					
+				</div>
+			</div> -->
+		</main>
+
+		<footer>
+			<p>Footer</p>
+		</footer>
+	</body>
+</html>
